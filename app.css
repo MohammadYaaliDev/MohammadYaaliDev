@@ -1,0 +1,89 @@
+html {
+    box-sizing: border-box;
+    
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+body {
+    font-family: "Poppins" , sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.dropdown{
+    position: relative;
+}
+
+.dropdown__btn{
+    width: 150px;
+    height: 50px;
+    background-color: #FF6F00;
+    color: #fff;
+    border: none;
+    outline: none;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 180ms ease-in 120ms;
+}
+
+.dropdown__btn svg {
+    width: 19px;
+    height: 42px;
+    transition: all 180ms ease-in 120ms;
+
+}
+
+.dropdown__content {
+    width: 150px;
+    position: absolute;
+    top: 54px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 180ms ease-in 120ms;
+    border-radius: 1px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.dropdown__content a {
+    text-decoration: none;
+    /* background-color: #FBE9E7; */
+    color: #000;
+    display: block;
+    text-align: center;
+    margin-top: 3px;
+}
+
+.dropdown:hover .dropdown__btn{
+    background-color: #FFB74D;
+}
+
+.dropdown:hover .dropdown__btn svg{
+    transform: rotate(180deg);
+}
+
+.dropdown:hover .dropdown__content{
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(12px);
+}
+
+.content__links:hover{
+        background-color: #FFE0B2;
+        transition: all 180ms ease-in 80ms;
+
+}
